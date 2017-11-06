@@ -1,0 +1,7 @@
+
+//GPT-JavaScript-Bibliothek 
+(function() { 
+    var useSSL = 'https:' == document.location.protocol; 
+    var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; 
+    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>'); })(); 
+    //jQuery-Bibliothek if (typeof jQuery == 'undefined') {   document.write('<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js\"><\/script>'); } //Site-Variablen var idgStorage = new Object(); idgStorage.adUnit1 = "/8456/IDG.DE_NET_Itwissen.de"; idgStorage.adUnit2 = ""; idgStorage.sec = "article";  //dynamisch home=homepage article=Rest der Seite idgStorage.rs_tax = "no_tax";  //statisch alle seiten, wird mit Meta Tag Keywords befuellt,falls vorhanden </script> <!--Ende TN Site Variablen--> <!--Start TN Global Script--> 

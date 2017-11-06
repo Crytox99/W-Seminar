@@ -1,0 +1,106 @@
+@charset "utf-8";
+/*  style.de.css -- CSS for Germanized documents on www.gnu.org.
+
+    Copyright (C) 2011-2015 Free Software Foundation, Inc.
+    Author: Joerg Kohne <www-de-translators@gnu.org>, 2011-2015.
+
+    Permission is hereby granted, free of charge, to any person
+    obtaining a copy of this software and associated documentation
+    files (the "Software"), to deal in the Software without
+    restriction, including without limitation the rights to use,
+    copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following
+    conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software. */
+
+#logo:lang(de) {/* Insert German background image */
+  background:url(/graphics/topbanner.de.png) no-repeat;
+  border:0;
+  float: left;
+  margin:0em;
+  padding:0; 
+}
+
+/* Help the reader avoid wasted time linking to pages they can not read;
+   saves the translator time and effort */
+#content a[href^="http://"]:after,#content a[href^="https://"]:after{content:"\00a0\2197";}
+#content a[hreflang = 'de']:after{content:" [deu.] ";}
+#content a[hreflang = 'en']:after{content:" [engl.] ";}
+#content a[hreflang = 'es']:after{content:" [span.] ";}
+#content a[hreflang = 'fr']:after{content:" [franz.] ";}
+#content a[hreflang = 'it']:after{content:" [ital.] ";}
+
+/* Specify pairs of quotes for two levels */
+/* Insert quotes before q element content */
+/*
+#content::lang(de)>q {quotes:'\201e' '\201c' '\201a' '\2018';}
+#content::lang(de-AT)>q {quotes:'\00bb' '\00ab' '\203a' '\2039';}
+#content::lang(de-DE)>q {quotes:'\201e' '\201c' '\201a' '\2018';}
+#content::lang(de-CH)>q {quotes:'\00ab' '\00bb' '\2039' '\203a';}
+#content:lang(en)>q {quotes:\201c \201d \2018 \2019;}
+#content:lang(fr)>q {quotes:'\00ab\00a0' '\00a0\00bb' '\2039\00a0' '\00a0\203a';}
+#content:lang(ru)>q {quotes:'0ab' '0bb' '\201e' '\201c';}
+q:before {content:open-quote;}
+q:after {content:close-quote;}
+q q:before { content:open-quote; color:#0a0; }
+q q:after { content:close-quote; color:#0a0; }
+*/
+
+:lang(de)>q {quotes:'\201e' '\201c' '\201a' '\2018';}
+:lang(de-at)>q {quotes:'\00bb' '\00ab' '\203a' '\2039';}
+:lang(de-de)>q {quotes:'\201e' '\201c' '\201a' '\2018';}
+:lang(de-ch)>q {quotes:'\00ab' '\00bb' '\2039' '\203a';}
+:lang(en)>q {quotes:'\201c' '\201d' '\2018' '\2019';}
+:lang(fr)>q {quotes:'\00ab\00a0' '\00a0\00bb' '\2039\00a0' '\00a0\203a';}
+:lang(ru)>q {quotes:'0ab' '0bb' '\201e' '\201c';}
+q:before  { content: open-quote;}
+q:after   { content: close-quote;}
+q q:before  { content: open-quote;}
+q q:after   { content: close-quote;}
+
+/* Insert quotes before and after blockquote element content
+   !! Citation blocks are not consistently markup'ed semantically !!
+   !! and faulty used on gnu.org (not W3C conform), so unusable   !!
+   !! for www-de team                        !!
+blockquote p:first-of-type::before{content:open-quote;}
+blockquote p::before{content:no-open-quote;}
+blockquote p::after{content:no-close-quote;}
+blockquote p:last-of-type::after{content:close-quote;} */
+
+
+#navigation, #edu-navigation {/* all menu items uppercased */
+  text-transform: uppercase;
+}
+
+/* Note with reference back to referenced text  */
+.transnote, .fnote {
+  font-size: 85%;
+  position:relative;
+  top:-7px;
+  margin-right:8px;
+  text-decoration: none;
+}
+ol#transnote li, ol#fnote li {
+  list-style-type: none;
+  text-decoration: none;
+  margin-left:0.5cm;
+  text-indent:-0.4cm;
+}
+
+/* custom www-de format here …  */
+.teletype { /* HTML5: replacement for <tt> */
+  font-family: "Courier New", Courier, monospace;
+}
+
+.noteClass { /* Text in red */
+  color:#db4329;
+}
+
+.phonetics {
+  color : #808080;
+  font-style : normal;
+  font-weight : normal;
+} 
